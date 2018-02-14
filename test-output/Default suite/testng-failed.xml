@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.wipro.opencart.TC01Opencart">
+        <methods>
+          <include name="getResult"/>
+          <include name="startReport"/>
+          <include name="ExcelPrinting" invocation-numbers="0"/>
+          <include name="AddToCart"/>
+          <include name="SamsungTab"/>
+          <include name="Logout"/>
+          <include name="launchBrowser"/>
+          <include name="ReviewPrinting" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.wipro.opencart.TC01Opencart -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
