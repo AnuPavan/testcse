@@ -76,7 +76,7 @@ public class TC01Opencart extends Extentreports
 			//GenericMethods.mySendText(RegisterPage.fnameR, FirstName);
 			
 			driver.findElement(By.name(pro.getProperty("Register.Lastname.name"))).sendKeys(Lastname);
-			driver.findElement(By.name(pro.getProperty("Register.Email.name"))).sendKeys(System.nanoTime()+Email);
+			driver.findElement(By.name(pro.getProperty("Register.Email.name"))).sendKeys(Email);
 			driver.findElement(By.name(pro.getProperty("Register.Telephone.name"))).sendKeys(Telephone);
 			driver.findElement(By.name(pro.getProperty("Register.Address1.name"))).sendKeys(Address1);
 			driver.findElement(By.name(pro.getProperty("Register.city.name"))).sendKeys(City);
@@ -147,6 +147,13 @@ public class TC01Opencart extends Extentreports
 		public void SamsungTab()
 		{
 			logger = extent.startTest("SamsungTab");
+			/* 
+			  RP = new RegistrationPage(driver); 
+			  RP.fnameR.sendKeys(fname); 
+			   RP.Register.click();	 
+			      RegistrationPage RP; */
+			   
+
 			driver.findElement(By.xpath(pro.getProperty("Home.xpath"))).click();
 			System.out.println("Home page");
 		    driver.findElement(By.xpath(pro.getProperty("SamsungGalaxytab.xpath"))).click();

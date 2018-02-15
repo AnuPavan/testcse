@@ -1,27 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
     <line>
       <![CDATA[Login successful]]>
     </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
+    <line>
+      <![CDATA[Login successful]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="133453" started-at="2018-02-14T11:14:56Z" finished-at="2018-02-14T11:17:09Z">
+  <suite name="Suite" duration-ms="442954" started-at="2018-02-15T04:49:38Z" finished-at="2018-02-15T04:57:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="133453" started-at="2018-02-14T11:14:56Z" finished-at="2018-02-14T11:17:09Z">
-      <class name="com.wipro.opencart.TC02Opencart">
-        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="startReport" is-config="true" duration-ms="452" started-at="2018-02-14T16:44:56Z" finished-at="2018-02-14T16:44:56Z">
+    <test name="Test" duration-ms="442954" started-at="2018-02-15T04:49:38Z" finished-at="2018-02-15T04:57:01Z">
+      <class name="com.wipro.opencart.TC04Opencart">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.opencart.TC04Opencart@e25b2fe]" name="startReport" is-config="true" duration-ms="10" started-at="2018-02-15T10:24:59Z" finished-at="2018-02-15T10:24:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startReport -->
-        <test-method status="PASS" signature="login()[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="login" is-config="true" duration-ms="16312" started-at="2018-02-14T16:44:56Z" finished-at="2018-02-14T16:45:12Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:com.wipro.opencart.TC04Opencart@e25b2fe]" name="login" is-config="true" duration-ms="21131" started-at="2018-02-15T10:24:59Z" finished-at="2018-02-15T10:25:20Z">
           <reporter-output>
             <line>
               <![CDATA[Login successful]]>
             </line>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="Search(java.lang.String)[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="Search" duration-ms="283" started-at="2018-02-14T16:45:13Z" data-provider="Search" finished-at="2018-02-14T16:45:14Z">
+        <test-method status="PASS" signature="Featured()[pri:0, instance:com.wipro.opencart.TC04Opencart@e25b2fe]" name="Featured" duration-ms="100290" started-at="2018-02-15T10:25:20Z" finished-at="2018-02-15T10:27:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Featured -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC04Opencart@e25b2fe]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T10:27:00Z" finished-at="2018-02-15T10:27:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Featured status=SUCCESS method=TC04Opencart.Featured()[pri:0, instance:com.wipro.opencart.TC04Opencart@e25b2fe] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="Logout1()[pri:0, instance:com.wipro.opencart.TC04Opencart@e25b2fe]" name="Logout1" is-config="true" duration-ms="533" started-at="2018-02-15T10:27:00Z" finished-at="2018-02-15T10:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout1 -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.opencart.TC04Opencart@e25b2fe]" name="endReport" is-config="true" duration-ms="66" started-at="2018-02-15T10:27:01Z" finished-at="2018-02-15T10:27:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.wipro.opencart.TC04Opencart -->
+      <class name="com.wipro.opencart.TC02Opencart">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="startReport" is-config="true" duration-ms="10" started-at="2018-02-15T10:20:48Z" finished-at="2018-02-15T10:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="login" is-config="true" duration-ms="15035" started-at="2018-02-15T10:20:48Z" finished-at="2018-02-15T10:21:03Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="Search(java.lang.String)[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="Search" duration-ms="1163" started-at="2018-02-15T10:21:03Z" data-provider="Search" finished-at="2018-02-15T10:21:04Z">
           <params>
             <param index="0">
               <value>
@@ -32,41 +74,255 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Search -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="getResult" is-config="true" duration-ms="3" started-at="2018-02-14T16:45:14Z" finished-at="2018-02-14T16:45:14Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T10:21:04Z" finished-at="2018-02-15T10:21:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Search status=SUCCESS method=TC02Opencart.Search(java.lang.String)[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2] output={null}]]]>
+                <![CDATA[[TestResult name=Search status=SUCCESS method=TC02Opencart.Search(java.lang.String)[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="ProductComparision()[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="ProductComparision" duration-ms="114601" started-at="2018-02-14T16:45:14Z" finished-at="2018-02-14T16:47:08Z">
+        <test-method status="PASS" signature="ProductComparision()[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="ProductComparision" duration-ms="112768" started-at="2018-02-15T10:21:04Z" finished-at="2018-02-15T10:22:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ProductComparision -->
-        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-14T16:47:08Z" finished-at="2018-02-14T16:47:08Z">
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="getResult" is-config="true" duration-ms="1" started-at="2018-02-15T10:22:57Z" finished-at="2018-02-15T10:22:57Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ProductComparision status=SUCCESS method=TC02Opencart.ProductComparision()[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2] output={null}]]]>
+                <![CDATA[[TestResult name=ProductComparision status=SUCCESS method=TC02Opencart.ProductComparision()[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getResult -->
-        <test-method status="PASS" signature="Logout()[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="Logout" is-config="true" duration-ms="429" started-at="2018-02-14T16:47:08Z" finished-at="2018-02-14T16:47:09Z">
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="Logout" is-config="true" duration-ms="553" started-at="2018-02-15T10:22:57Z" finished-at="2018-02-15T10:22:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Logout -->
-        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.opencart.TC02Opencart@6a41eaa2]" name="endReport" is-config="true" duration-ms="464" started-at="2018-02-14T16:47:09Z" finished-at="2018-02-14T16:47:09Z">
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.opencart.TC02Opencart@4dfa3a9d]" name="endReport" is-config="true" duration-ms="84" started-at="2018-02-15T10:22:57Z" finished-at="2018-02-15T10:22:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
       </class> <!-- com.wipro.opencart.TC02Opencart -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.wipro.opencart.TC03Opencart">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.opencart.TC03Opencart@204f30ec]" name="startReport" is-config="true" duration-ms="10" started-at="2018-02-15T10:22:57Z" finished-at="2018-02-15T10:22:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="login()[pri:0, instance:com.wipro.opencart.TC03Opencart@204f30ec]" name="login" is-config="true" duration-ms="16271" started-at="2018-02-15T10:22:57Z" finished-at="2018-02-15T10:23:14Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Login successful]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="AddPhones()[pri:0, instance:com.wipro.opencart.TC03Opencart@204f30ec]" name="AddPhones" duration-ms="104495" started-at="2018-02-15T10:23:14Z" finished-at="2018-02-15T10:24:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddPhones -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC03Opencart@204f30ec]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T10:24:58Z" finished-at="2018-02-15T10:24:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddPhones status=SUCCESS method=TC03Opencart.AddPhones()[pri:0, instance:com.wipro.opencart.TC03Opencart@204f30ec] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.wipro.opencart.TC03Opencart@204f30ec]" name="Logout" is-config="true" duration-ms="581" started-at="2018-02-15T10:24:58Z" finished-at="2018-02-15T10:24:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.opencart.TC03Opencart@204f30ec]" name="endReport" is-config="true" duration-ms="103" started-at="2018-02-15T10:24:59Z" finished-at="2018-02-15T10:24:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.wipro.opencart.TC03Opencart -->
+      <class name="com.wipro.opencart.TC01Opencart">
+        <test-method status="PASS" signature="startReport()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="startReport" is-config="true" duration-ms="346" started-at="2018-02-15T10:19:38Z" finished-at="2018-02-15T10:19:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startReport -->
+        <test-method status="PASS" signature="launchBrowser()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="launchBrowser" is-config="true" duration-ms="5693" started-at="2018-02-15T10:19:38Z" finished-at="2018-02-15T10:19:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method status="PASS" signature="ExcelPrinting(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="ExcelPrinting" duration-ms="2797" started-at="2018-02-15T10:19:45Z" data-provider="proauthen" finished-at="2018-02-15T10:19:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Demo51]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[User]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Demo70.User@gmail.com]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[2664867867]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[abcd]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[Hyderabad]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1111]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Abc@123456]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Abc@123456]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ExcelPrinting -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="getResult" is-config="true" duration-ms="4" started-at="2018-02-15T10:19:48Z" finished-at="2018-02-15T10:19:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ExcelPrinting status=SUCCESS method=TC01Opencart.ExcelPrinting(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="SamsungTab()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="SamsungTab" duration-ms="3183" started-at="2018-02-15T10:19:48Z" finished-at="2018-02-15T10:19:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SamsungTab -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T10:19:51Z" finished-at="2018-02-15T10:19:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=SamsungTab status=SUCCESS method=TC01Opencart.SamsungTab()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="ReviewPrinting(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="ReviewPrinting" duration-ms="16678" started-at="2018-02-15T10:19:51Z" data-provider="Review" finished-at="2018-02-15T10:20:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoUser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[This is a Demo]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReviewPrinting -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="getResult" is-config="true" duration-ms="1" started-at="2018-02-15T10:20:07Z" finished-at="2018-02-15T10:20:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ReviewPrinting status=SUCCESS method=TC01Opencart.ReviewPrinting(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="ReviewPrinting(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="ReviewPrinting" duration-ms="17541" started-at="2018-02-15T10:20:07Z" data-provider="Review" finished-at="2018-02-15T10:20:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[DemoUser1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[This is a Demo User.This is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo 
+ UserThis is a Demo 
+ UserThis is a Demo 
+ UserThis is a Demo 
+ UserThis is a Demo ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReviewPrinting -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T10:20:25Z" finished-at="2018-02-15T10:20:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ReviewPrinting status=SUCCESS method=TC01Opencart.ReviewPrinting(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="AddToCart()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="AddToCart" duration-ms="18880" started-at="2018-02-15T10:20:25Z" finished-at="2018-02-15T10:20:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCart -->
+        <test-method status="PASS" signature="getResult(org.testng.ITestResult)[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="getResult" is-config="true" duration-ms="0" started-at="2018-02-15T10:20:44Z" finished-at="2018-02-15T10:20:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=AddToCart status=SUCCESS method=TC01Opencart.AddToCart()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getResult -->
+        <test-method status="PASS" signature="Logout()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="Logout" is-config="true" duration-ms="3453" started-at="2018-02-15T10:20:44Z" finished-at="2018-02-15T10:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method status="PASS" signature="endReport()[pri:0, instance:com.wipro.opencart.TC01Opencart@6093dd95]" name="endReport" is-config="true" duration-ms="404" started-at="2018-02-15T10:20:47Z" finished-at="2018-02-15T10:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endReport -->
+      </class> <!-- com.wipro.opencart.TC01Opencart -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -1,46 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.wipro.opencart.TC03Opencart">
-        <methods>
-          <include name="getResult"/>
-          <include name="login"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
-          <include name="Logout"/>
-        </methods>
-      </class> <!-- com.wipro.opencart.TC03Opencart -->
-      <class name="com.wipro.opencart.TC01Opencart">
-        <methods>
-          <include name="getResult"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
-          <include name="Logout"/>
-          <include name="launchBrowser"/>
-        </methods>
-      </class> <!-- com.wipro.opencart.TC01Opencart -->
-      <class name="com.wipro.opencart.TC02Opencart">
-        <methods>
-          <include name="getResult"/>
-          <include name="Logout"/>
-          <include name="startReport"/>
-          <include name="endReport"/>
-          <include name="ProductComparision"/>
-          <include name="login"/>
-        </methods>
-      </class> <!-- com.wipro.opencart.TC02Opencart -->
       <class name="com.wipro.opencart.TC04Opencart">
         <methods>
           <include name="getResult"/>
-          <include name="Logout1"/>
           <include name="startReport"/>
+          <include name="Logout1"/>
           <include name="Featured"/>
           <include name="endReport"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.wipro.opencart.TC04Opencart -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

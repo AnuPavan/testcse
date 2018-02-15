@@ -3,18 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.wipro.opencart.TC01Opencart">
+      <class name="com.wipro.opencart.TC04Opencart">
         <methods>
           <include name="getResult"/>
           <include name="startReport"/>
-          <include name="ExcelPrinting" invocation-numbers="0"/>
-          <include name="AddToCart"/>
-          <include name="SamsungTab"/>
-          <include name="Logout"/>
-          <include name="launchBrowser"/>
-          <include name="ReviewPrinting" invocation-numbers="0 1"/>
+          <include name="Logout1"/>
+          <include name="Featured"/>
+          <include name="endReport"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- com.wipro.opencart.TC01Opencart -->
+      </class> <!-- com.wipro.opencart.TC04Opencart -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
