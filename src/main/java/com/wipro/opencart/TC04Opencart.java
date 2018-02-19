@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -18,9 +19,12 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
@@ -35,17 +39,32 @@ public class TC04Opencart extends Extentreports
 	WebDriver driver;
 	List<WebElement> productlist;
 	String Orderid;
+	String url;
 	
 	//Step 1,2:Launch Browser and Opencart
 	@BeforeClass
 	public void login() throws IOException, InterruptedException
 	{
 	    
-		System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
+		/*System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
 		driver = new ChromeDriver();
-		driver.get("http://10.207.182.108:81/opencart/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		*/
+		url = "http://10.159.34.70:4444/wd/hub";
+        try {
+            DesiredCapabilities capabilities =DesiredCapabilities.internetExplorer();
+            //capabilities.setBrowserName("chrome");
+            capabilities.setPlatform(Platform.WINDOWS);
+            driver = new RemoteWebDriver(new URL(url), capabilities);
+        	
+            driver.get("http://10.207.182.108:81/opencart/");
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        
 		Thread.sleep(5000);
 		
 		 File file = new File("C://Users//an247684//workspace//TopGear1//ObjectRepository.properties");	

@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -16,9 +17,11 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
@@ -30,33 +33,49 @@ import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.wipro.opencart.GenericMethods;
+import org.openqa.selenium.remote.RemoteWebDriver;
 public class TC01Opencart extends Extentreports
 {
 	Properties pro;
 	WebDriver driver;
+	String url;
 	//RegisterPage RegisterPage;
 	//GenericMethods GenericMethods;
 	
 	@BeforeClass
 	public void launchBrowser() throws IOException
-	{
-		 
-	    //Step1: open the browser and Opencart
-		System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.get("http://10.207.182.108:81/opencart/");
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
-		Assert.assertEquals("Your Store", driver.getTitle());
-		System.out.println("Launched OpenCart");
-	
+		{
+			 
+		    //Step1: open the browser and Opencart
+			/*System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
+			driver = new ChromeDriver();*/
+			
+			url = "http://10.159.34.70:4444/wd/hub";
+	        try {
+	            DesiredCapabilities capabilities = new DesiredCapabilities();
+	            capabilities.setBrowserName("chrome");
+	            capabilities.setPlatform(Platform.WINDOWS);
+	            driver = new RemoteWebDriver(new URL(url), capabilities);
+	        	
+	            driver.get("http://10.207.182.108:81/opencart/");
+				driver.manage().window().maximize();
+				driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+			
+	        }
+	        catch(Exception e){
+	            e.printStackTrace();
+	        }
+	        
+			Assert.assertEquals("Your Store", driver.getTitle());
+			System.out.println("Launched OpenCart");
 		
-		
-		File file = new File("C://Users//an247684//workspace//TopGear1//ObjectRepository.properties");
-			  FileInputStream fis = new FileInputStream(file);
-			  pro = new Properties();
-			  pro.load(fis); 
-	 }
+			
+			
+			File file = new File("C://Users//an247684//workspace//TopGear1//ObjectRepository.properties");
+				  FileInputStream fis = new FileInputStream(file);
+				  pro = new Properties();
+				  pro.load(fis); 
+		 }
 	
 		//Step3: Registration through DataProvider
 		@Test(dataProvider="proauthen",priority=1)
@@ -65,18 +84,21 @@ public class TC01Opencart extends Extentreports
 			logger = extent.startTest("ExcelPrinting");
 			/*RegisterPage =new RegisterPage(driver);
 			
+	
 			
 			GenericMethods=new GenericMethods();
 			RegisterPage.CreateAcct.click();
 			RegisterPage.fnameR.sendKeys(FirstName);
 			*/
+			String Emailadd=System.nanoTime()+Email;
+			System.out.println("The changed email is " + Emailadd);
 			driver.findElement(By.xpath(pro.getProperty("Register.Createacct.xpath"))).click();
 			driver.findElement(By.name(pro.getProperty("Register.Firstname.name"))).sendKeys(FirstName);
 			
 			//GenericMethods.mySendText(RegisterPage.fnameR, FirstName);
 			
 			driver.findElement(By.name(pro.getProperty("Register.Lastname.name"))).sendKeys(Lastname);
-			driver.findElement(By.name(pro.getProperty("Register.Email.name"))).sendKeys(Email);
+			driver.findElement(By.name(pro.getProperty("Register.Email.name"))).sendKeys(Emailadd);
 			driver.findElement(By.name(pro.getProperty("Register.Telephone.name"))).sendKeys(Telephone);
 			driver.findElement(By.name(pro.getProperty("Register.Address1.name"))).sendKeys(Address1);
 			driver.findElement(By.name(pro.getProperty("Register.city.name"))).sendKeys(City);

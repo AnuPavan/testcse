@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
@@ -20,9 +21,12 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -41,7 +45,7 @@ public class TC02Opencart extends Extentreports
 	
 	Properties pro;
 	WebDriver driver;
-	
+	String url;
 	
 	//Step:1 Launch  Open Cart application http://10.207.182.108:81/opencart/
 	
@@ -49,8 +53,19 @@ public class TC02Opencart extends Extentreports
 	public void login() throws IOException, InterruptedException
 	{
 	    
-		System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
+		//driver = new ChromeDriver();
+		
+		url = "http://10.159.34.70:4444/wd/hub";
+        try {
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName("chrome");
+            capabilities.setPlatform(Platform.WINDOWS);
+            driver = new RemoteWebDriver(new URL(url), capabilities);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
 		WebDriverWait wait=new WebDriverWait(driver, 20);
 		driver.get("http://10.207.182.108:81/opencart/");
 		driver.manage().window().maximize();
