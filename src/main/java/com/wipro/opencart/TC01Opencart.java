@@ -71,7 +71,7 @@ public class TC01Opencart extends Extentreports
 		
 			
 			
-			File file = new File("C://Users//an247684//workspace//TopGear1//ObjectRepository.properties");
+			File file = new File(System.getProperty("user.dir")+"/src/main/java/com/wipro/Testdata/myProp.properties");
 				  FileInputStream fis = new FileInputStream(file);
 				  pro = new Properties();
 				  pro.load(fis); 
@@ -142,7 +142,7 @@ public class TC01Opencart extends Extentreports
 		public static Object[][] ExcelData1() throws IOException
 		{
 			// TODO Auto-generated method stub
-			File fil = new File("D:\\TestExcel.xlsx");
+			File fil = new File(System.getProperty("user.dir")+"/src/main/java/com/wipro/Testdata/TestExcel.xlsx");
 			FileInputStream fis = new FileInputStream(fil);
 			Workbook wb = new XSSFWorkbook(fis);
 			Sheet sh = wb.getSheet("Sheet1");
@@ -255,7 +255,7 @@ public class TC01Opencart extends Extentreports
 			public static Object[][] ExcelData() throws IOException
 			{
 				// TODO Auto-generated method stub
-				File fil = new File("D:\\Review.xlsx");
+				File fil = new File(System.getProperty("user.dir")+"/src/main/java/com/wipro/opencart/Review.xlsx");
 				FileInputStream fis = new FileInputStream(fil);
 				Workbook wb = new XSSFWorkbook(fis);
 				Sheet sh = wb.getSheet("Sheet1");
@@ -301,7 +301,7 @@ public class TC01Opencart extends Extentreports
 	 		driver.findElement(By.xpath(pro.getProperty("SamsungGalaxytab.Currency.Euro.xpath"))).click();
 	 		System.out.println("Clicked on Euro");
 	 		Thread.sleep(3000);
-	 		BufferedWriter bw= new BufferedWriter(new FileWriter("D:\\Filename.txt"));
+	 		BufferedWriter bw= new BufferedWriter(new FileWriter(System.getProperty("user.dir")+"/test-output/Filename.txt"));
 	 		Thread.sleep(3000);
 	 		String Euro= driver.findElement(By.xpath(pro.getProperty("SamsungGalaxytab.UnitPrice.Euro.xpath"))).getText();
 	 		System.out.println(Euro);

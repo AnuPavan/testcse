@@ -53,9 +53,9 @@ public class TC02Opencart extends Extentreports
 	public void login() throws IOException, InterruptedException
 	{
 	    
-		//System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
-		//driver = new ChromeDriver();
-		
+		/*System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
+		driver = new ChromeDriver();
+		*/
 		url = "http://10.159.34.70:4444/wd/hub";
         try {
             DesiredCapabilities capabilities = new DesiredCapabilities();
