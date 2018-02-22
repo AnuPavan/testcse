@@ -101,7 +101,9 @@ public class TC02Opencart extends Extentreports
 		logger = extent.startTest("Search");
 		//Search
 		driver.findElement(By.xpath(pro.getProperty("TC02.Search.xpath"))).sendKeys(Ant);
+		
 		Thread.sleep(5000);
+		driver.findElement(By.xpath(".//*[@id='search']/input")).click();
 		
 		Robot rb= new Robot();
 		rb.keyPress(KeyEvent.VK_ENTER);
