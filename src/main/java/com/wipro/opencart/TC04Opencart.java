@@ -52,8 +52,8 @@ public class TC04Opencart extends Extentreports
 		url = "http://10.159.34.70:4444/wd/hub";
         try {
             DesiredCapabilities capabilities =DesiredCapabilities.internetExplorer();
-            //capabilities.setBrowserName("chrome");
-            capabilities.setPlatform(Platform.WINDOWS);
+            //capabilities.setBrowserName("IE");
+            capabilities.setPlatform((Platform.WINDOWS));
             driver = new RemoteWebDriver(new URL(url), capabilities);
         	
             driver.get("http://10.207.182.108:81/opencart/");
@@ -331,6 +331,7 @@ public class TC04Opencart extends Extentreports
 		String f= driver.findElement(By.xpath(pro.getProperty("Logout.xpath"))).getText();
 	 	  Assert.assertEquals(f,"Account Logout");
 			System.out.println("Logout Successful");
+			driver.close();
 	}
 	
 

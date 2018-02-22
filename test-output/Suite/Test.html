@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/9</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 20 13:02:48 IST 2018</td>
+<td>Started on:</td><td>Thu Feb 22 15:08:54 IST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9861 ms)</td>
+<tr><td>Total time:</td><td>440 seconds (440854 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,12 +75,48 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.wipro.opencart.TC01Opencart.launchBrowser()'><b>launchBrowser</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td><div><pre>java.lang.NullPointerException
-	at com.wipro.opencart.TC01Opencart.launchBrowser(TC01Opencart.java:69)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace122155649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace122155649'><pre>java.lang.NullPointerException
-	at com.wipro.opencart.TC01Opencart.launchBrowser(TC01Opencart.java:69)
+<td title='com.wipro.opencart.TC04Opencart.login()'><b>login</b><br>Test class: com.wipro.opencart.TC04Opencart</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == *[name=&apos;email&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;D-184000435&apos;, ip: &apos;10.159.34.70&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{proxy=Proxy(), webdriver.remote.sessionid=5940eba5-381c-4a04-96cc-c907f20f1b30, acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0.0, ie.ensureCleanSession=false, elementScrollBehavior=0.0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:9645/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000.0, ignoreProtectedModeSettings=false}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, platformName=windows, setWindowRect=true, platform=ANY}]
+Session ID: 5940eba5-381c-4a04-96cc-c907f20f1b30
+*** Element info: {Using=name, value=email}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at com.wipro.opencart.TC04Opencart.login(TC04Opencart.java:76)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace512256603", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace512256603'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with css selector == *[name=&apos;email&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;D-184000435&apos;, ip: &apos;10.159.34.70&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{proxy=Proxy(), webdriver.remote.sessionid=5940eba5-381c-4a04-96cc-c907f20f1b30, acceptInsecureCerts=false, browserVersion=11, se:ieOptions={nativeEvents=true, browserAttachTimeout=0.0, ie.ensureCleanSession=false, elementScrollBehavior=0.0, enablePersistentHover=true, ie.browserCommandLineSwitches=, ie.forceCreateProcessApi=false, requireWindowFocus=false, initialBrowserUrl=http://localhost:9645/, ignoreZoomSetting=false, ie.fileUploadDialogTimeout=3000.0, ignoreProtectedModeSettings=false}, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, browserName=internet explorer, pageLoadStrategy=normal, javascriptEnabled=true, platformName=windows, setWindowRect=true, platform=ANY}]
+Session ID: 5940eba5-381c-4a04-96cc-c907f20f1b30
+*** Element info: {Using=name, value=email}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:485)
+	at org.openqa.selenium.By$ByName.findElement(By.java:303)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at com.wipro.opencart.TC04Opencart.login(TC04Opencart.java:76)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -107,7 +143,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
 </pre></div></td>
 <td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
+<td>com.wipro.opencart.TC04Opencart@3abbfa04</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
@@ -117,110 +153,10 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.wipro.opencart.TC02Opencart.startReport()'><b>startReport</b><br>Test class: com.wipro.opencart.TC02Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC02Opencart.login()'><b>login</b><br>Test class: com.wipro.opencart.TC02Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC03Opencart.startReport()'><b>startReport</b><br>Test class: com.wipro.opencart.TC03Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC03Opencart@239963d8</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC03Opencart.login()'><b>login</b><br>Test class: com.wipro.opencart.TC03Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC03Opencart@239963d8</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC04Opencart.startReport()'><b>startReport</b><br>Test class: com.wipro.opencart.TC04Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC04Opencart@3abbfa04</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC04Opencart.login()'><b>login</b><br>Test class: com.wipro.opencart.TC04Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC04Opencart@3abbfa04</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC01Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC01Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC01Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC01Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC01Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC02Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC02Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC02Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC02Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC03Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC03Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC03Opencart@239963d8</td></tr>
-<tr>
 <td title='com.wipro.opencart.TC04Opencart.getResult()'><b>getResult</b><br>Test class: com.wipro.opencart.TC04Opencart</td>
 <td></td>
 <td>0</td>
 <td>com.wipro.opencart.TC04Opencart@3abbfa04</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC01Opencart.Logout()'><b>Logout</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC01Opencart.endReport()'><b>endReport</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC02Opencart.Logout()'><b>Logout</b><br>Test class: com.wipro.opencart.TC02Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC02Opencart.endReport()'><b>endReport</b><br>Test class: com.wipro.opencart.TC02Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC03Opencart.Logout()'><b>Logout</b><br>Test class: com.wipro.opencart.TC03Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC03Opencart@239963d8</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC03Opencart.endReport()'><b>endReport</b><br>Test class: com.wipro.opencart.TC03Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC03Opencart@239963d8</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC04Opencart.Logout1()'><b>Logout1</b><br>Test class: com.wipro.opencart.TC04Opencart</td>
 <td></td>
@@ -232,8 +168,8 @@ function toggleAllBoxes() {
 <td>0</td>
 <td>com.wipro.opencart.TC04Opencart@3abbfa04</td></tr>
 </table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -242,32 +178,27 @@ function toggleAllBoxes() {
 <tr>
 <td title='com.wipro.opencart.TC03Opencart.AddPhones()'><b>AddPhones</b><br>Test class: com.wipro.opencart.TC03Opencart</td>
 <td></td>
-<td>0</td>
+<td>106</td>
 <td>com.wipro.opencart.TC03Opencart@239963d8</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC01Opencart.AddToCart()'><b>AddToCart</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
 <td></td>
-<td>0</td>
+<td>19</td>
 <td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC01Opencart.ExcelPrinting()'><b>ExcelPrinting</b><br>Test class: com.wipro.opencart.TC01Opencart<br>Parameters: Demo51, User, Demo74.User@gmail.com, 2664867867, abcd, Hyderabad, 1111, Abc@123456, Abc@123456</td>
 <td></td>
-<td>0</td>
+<td>6</td>
 <td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
-<tr>
-<td title='com.wipro.opencart.TC04Opencart.Featured()'><b>Featured</b><br>Test class: com.wipro.opencart.TC04Opencart</td>
-<td></td>
-<td>0</td>
-<td>com.wipro.opencart.TC04Opencart@3abbfa04</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC02Opencart.ProductComparision()'><b>ProductComparision</b><br>Test class: com.wipro.opencart.TC02Opencart</td>
 <td></td>
-<td>0</td>
+<td>114</td>
 <td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC01Opencart.ReviewPrinting()'><b>ReviewPrinting</b><br>Test class: com.wipro.opencart.TC01Opencart<br>Parameters: DemoUser, This is a Demo, 4</td>
 <td></td>
-<td>0</td>
+<td>17</td>
 <td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC01Opencart.ReviewPrinting()'><b>ReviewPrinting</b><br>Test class: com.wipro.opencart.TC01Opencart<br>Parameters: DemoUser1, This is a Demo User.This is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo UserThis is a Demo 
@@ -276,18 +207,31 @@ function toggleAllBoxes() {
  UserThis is a Demo 
  UserThis is a Demo , 2</td>
 <td></td>
-<td>0</td>
+<td>17</td>
 <td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC01Opencart.SamsungTab()'><b>SamsungTab</b><br>Test class: com.wipro.opencart.TC01Opencart</td>
 <td></td>
-<td>0</td>
+<td>4</td>
 <td>com.wipro.opencart.TC01Opencart@53b32d7</td></tr>
 <tr>
 <td title='com.wipro.opencart.TC02Opencart.Search()'><b>Search</b><br>Test class: com.wipro.opencart.TC02Opencart<br>Parameters: Apple</td>
 <td></td>
-<td>0</td>
+<td>6</td>
 <td>com.wipro.opencart.TC02Opencart@598067a5</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.wipro.opencart.TC04Opencart.Featured()'><b>Featured</b><br>Test class: com.wipro.opencart.TC04Opencart</td>
+<td></td>
+<td>0</td>
+<td>com.wipro.opencart.TC04Opencart@3abbfa04</td></tr>
 </table><p>
 </body>
 </html>

@@ -16,8 +16,8 @@ import java.io.File;
 	import com.relevantcodes.extentreports.LogStatus;
 
 	public class Extentreports{
-		ExtentReports extent;
-		ExtentTest logger;
+		static ExtentReports extent;
+		static ExtentTest logger;
 
 
 		@BeforeClass

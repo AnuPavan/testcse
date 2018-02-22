@@ -41,9 +41,7 @@ import com.relevantcodes.extentreports.LogStatus;
 public class TC02Opencart extends Extentreports
 
 {
-
-	
-	Properties pro;
+    Properties pro;
 	WebDriver driver;
 	String url;
 	
@@ -58,7 +56,7 @@ public class TC02Opencart extends Extentreports
 		*/
 		url = "http://10.159.34.70:4444/wd/hub";
         try {
-            DesiredCapabilities capabilities = new DesiredCapabilities();
+            DesiredCapabilities capabilities = new DesiredCapabilities().chrome();
             capabilities.setBrowserName("chrome");
             capabilities.setPlatform(Platform.WINDOWS);
             driver = new RemoteWebDriver(new URL(url), capabilities);
@@ -98,11 +96,13 @@ public class TC02Opencart extends Extentreports
 	
 	//Step 4: Enter the key word in search text box using excel Validation: "apple" (in SearchProd.xlsx)
 	@Test(dataProvider="Search",priority=1)
-	public void Search(String Ant) throws AWTException	
+	public void Search(String Ant) throws AWTException, Exception	
 	{
 		logger = extent.startTest("Search");
 		//Search
 		driver.findElement(By.xpath(pro.getProperty("TC02.Search.xpath"))).sendKeys(Ant);
+		Thread.sleep(5000);
+		
 		Robot rb= new Robot();
 		rb.keyPress(KeyEvent.VK_ENTER);
 		rb.keyRelease(KeyEvent.VK_ENTER);
@@ -286,16 +286,17 @@ public class TC02Opencart extends Extentreports
 
 */            	
             //Step 10: click on 1st phone link
-            driver.findElement(By.xpath(pro.getProperty("TC02.1stPhoneLink.xpath"))).click();
+            //driver.findElement(By.xpath(pro.getProperty("TC02.1stPhoneLink.xpath"))).click();
+            driver.findElement(By.linkText("iPhone")).click();
             System.out.println("Step 10:clicked on the 1st phone link");
             Thread.sleep(3000); 
             
-            //Step 11:Fifth feature in the description
+           /* //Step 11:Fifth feature in the description
             BufferedWriter bw3= new BufferedWriter(new FileWriter("D:\\TC02_3.txt"));
        		String desc= driver.findElement(By.xpath(pro.getProperty("TC03.5thdesc.xpath"))).getText();
        		bw3.write(desc);
        		bw3.close();
-   
+   */
         
             //Step 12: click on add to cart
             driver.findElement(By.xpath(pro.getProperty("TC02.1stPhone.AddTocart.xpath"))).click();
@@ -395,6 +396,7 @@ public class TC02Opencart extends Extentreports
         		String f= driver.findElement(By.xpath(pro.getProperty("Logout.xpath"))).getText();
         	 	  Assert.assertEquals(f,"Account Logout");
         			System.out.println("Logout Successful");
+        			driver.close();
         	}
 	}
         

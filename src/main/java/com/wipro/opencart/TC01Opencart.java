@@ -3,7 +3,6 @@ package com.wipro.opencart;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
@@ -14,20 +13,16 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -52,7 +47,7 @@ public class TC01Opencart extends Extentreports
 			
 			url = "http://10.159.34.70:4444/wd/hub";
 	        try {
-	            DesiredCapabilities capabilities = new DesiredCapabilities();
+	            DesiredCapabilities capabilities = new DesiredCapabilities().chrome();
 	            capabilities.setBrowserName("chrome");
 	            capabilities.setPlatform(Platform.WINDOWS);
 	            driver = new RemoteWebDriver(new URL(url), capabilities);
@@ -255,7 +250,7 @@ public class TC01Opencart extends Extentreports
 			public static Object[][] ExcelData() throws IOException
 			{
 				// TODO Auto-generated method stub
-				File fil = new File(System.getProperty("user.dir")+"/src/main/java/com/wipro/opencart/Review.xlsx");
+				File fil = new File(System.getProperty("user.dir")+"/src/main/java/com/wipro/Testdata/Review.xlsx");
 				FileInputStream fis = new FileInputStream(fil);
 				Workbook wb = new XSSFWorkbook(fis);
 				Sheet sh = wb.getSheet("Sheet1");
@@ -350,6 +345,7 @@ public class TC01Opencart extends Extentreports
 		String f= driver.findElement(By.xpath(pro.getProperty("Logout.xpath"))).getText();
 	 	  Assert.assertEquals(f,"Account Logout");
 			System.out.println("Logout Successful");
+			driver.close();
 			
 	}
 	

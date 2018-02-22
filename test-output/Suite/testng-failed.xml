@@ -5,28 +5,36 @@
     <classes>
       <class name="com.wipro.opencart.TC01Opencart">
         <methods>
+          <include name="getResult"/>
           <include name="startReport"/>
-          <include name="ExcelPrinting"/>
-          <include name="AddToCart"/>
-          <include name="SamsungTab"/>
+          <include name="endReport"/>
+          <include name="Logout"/>
           <include name="launchBrowser"/>
-          <include name="ReviewPrinting"/>
         </methods>
       </class> <!-- com.wipro.opencart.TC01Opencart -->
       <class name="com.wipro.opencart.TC03Opencart">
         <methods>
-          <include name="AddPhones"/>
+          <include name="getResult"/>
+          <include name="login"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="Logout"/>
         </methods>
       </class> <!-- com.wipro.opencart.TC03Opencart -->
       <class name="com.wipro.opencart.TC04Opencart">
         <methods>
+          <include name="startReport"/>
           <include name="Featured"/>
+          <include name="login"/>
         </methods>
       </class> <!-- com.wipro.opencart.TC04Opencart -->
       <class name="com.wipro.opencart.TC02Opencart">
         <methods>
-          <include name="ProductComparision"/>
-          <include name="Search"/>
+          <include name="getResult"/>
+          <include name="Logout"/>
+          <include name="startReport"/>
+          <include name="endReport"/>
+          <include name="login"/>
         </methods>
       </class> <!-- com.wipro.opencart.TC02Opencart -->
     </classes>
