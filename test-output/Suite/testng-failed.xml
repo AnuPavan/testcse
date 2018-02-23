@@ -23,6 +23,8 @@
       </class> <!-- com.wipro.opencart.TC03Opencart -->
       <class name="com.wipro.opencart.TC04Opencart">
         <methods>
+          <include name="getResult"/>
+          <include name="Logout1"/>
           <include name="startReport"/>
           <include name="Featured"/>
           <include name="login"/>
@@ -34,6 +36,7 @@
           <include name="Logout"/>
           <include name="startReport"/>
           <include name="endReport"/>
+          <include name="ProductComparision"/>
           <include name="login"/>
         </methods>
       </class> <!-- com.wipro.opencart.TC02Opencart -->

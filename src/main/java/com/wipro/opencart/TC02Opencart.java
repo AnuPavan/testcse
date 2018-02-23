@@ -105,10 +105,11 @@ public class TC02Opencart extends Extentreports
 		Thread.sleep(5000);
 		driver.findElement(By.xpath(".//*[@id='search']/input")).click();
 		
-		Robot rb= new Robot();
+		driver.findElement(By.xpath(".//*[@id='search']/div")).click();
+		/*Robot rb= new Robot();
 		rb.keyPress(KeyEvent.VK_ENTER);
 		rb.keyRelease(KeyEvent.VK_ENTER);
-		
+		*/
 		System.out.println("Step 4:searched  Apple in search box");
 		logger.log(LogStatus.PASS, "Method \"Search\" is passed"); 
 
