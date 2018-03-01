@@ -44,7 +44,7 @@ public class TC01Opencart extends Extentreports
 		    //Step1: open the browser and Opencart
 			/*System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
 			driver = new ChromeDriver();*/
-			
+System.out.println("Review in going on");
 			url = "http://10.159.34.70:4444/wd/hub";
 	        try {
 	            DesiredCapabilities capabilities = new DesiredCapabilities().chrome();
@@ -53,7 +53,6 @@ public class TC01Opencart extends Extentreports
 	            driver = new RemoteWebDriver(new URL(url), capabilities);
 	        	
 	            driver.get("http://10.207.182.108:81/opencart/");
-				driver.manage().window().maximize();
 				driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 			
 	        }
@@ -118,10 +117,12 @@ public class TC01Opencart extends Extentreports
  		  
  		  
  		 String e= driver.findElement(By.xpath(pro.getProperty("Register.AccountCreatedText.xpath"))).getText();
-	 	  //Assert.assertEquals(e,"Your Account Has Been Created!");
+	 	  Assert.assertEquals(e,"Your Account Has Been Created!");
  		 System.out.println(e);
 			System.out.println("Account created");
 			logger.log(LogStatus.PASS, "Method \"ExcelPrinting\" is passed");
+			
+
 		}
 		//DataProvider
 
@@ -170,7 +171,7 @@ public class TC01Opencart extends Extentreports
 			   RP.Register.click();	 
 			      RegistrationPage RP; */
 			   
-
+			
 			driver.findElement(By.xpath(pro.getProperty("Home.xpath"))).click();
 			System.out.println("Home page");
 		    driver.findElement(By.xpath(pro.getProperty("SamsungGalaxytab.xpath"))).click();

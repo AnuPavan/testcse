@@ -1,5 +1,7 @@
 package com.wipro.opencart;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Properties;
@@ -22,16 +24,16 @@ public class TC05Opencart
 
 	Properties pro;
 	WebDriver driver;
-	String url;
+	//String url;
 	@Test
 	public void login() throws IOException, InterruptedException
 	{
 	    
-		/*System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","D://Selenium Drivers//chromedriver.exe");
 		driver = new ChromeDriver();
-		*/ 
+		
 
-		url = "http://10.159.34.70:4444/wd/hub";
+		/*url = "http://10.159.34.70:4444/wd/hub";
 	        try {
 	            DesiredCapabilities capabilities = new DesiredCapabilities();
 	            capabilities.setBrowserName("chrome");
@@ -40,7 +42,18 @@ public class TC05Opencart
 	        	 }
 	        catch(Exception e){
 	            e.printStackTrace();
-	        }
+	        }*/
+		WebDriverWait wait=new WebDriverWait(driver, 20);
+		driver.get("http://10.207.182.108:81/opencart/");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
+		Thread.sleep(5000);
+		
+		 File file = new File("C://Users//an247684//workspace//TopGear1//ObjectRepository.properties");	
+		  FileInputStream fis = new FileInputStream(file);
+		  pro = new Properties();
+		  pro.load(fis); 
+		  
 
 	        driver.get("http://10.207.182.108:81/opencart/");
 			driver.manage().window().maximize();

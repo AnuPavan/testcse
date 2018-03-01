@@ -52,7 +52,7 @@ public class TC04Opencart extends Extentreports
 		url = "http://10.159.34.70:4444/wd/hub";
         try {
             DesiredCapabilities capabilities =DesiredCapabilities.internetExplorer();
-            //capabilities.setBrowserName("IE");
+          
             capabilities.setPlatform((Platform.WINDOWS));
             driver = new RemoteWebDriver(new URL(url), capabilities);
         	
@@ -133,6 +133,7 @@ public class TC04Opencart extends Extentreports
 	{ 
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//div[@class='box-product']/div["+i+"]/div[1]/a/img")).click();
+		Thread.sleep(3000);
 		if(!(driver.findElement(By.xpath(pro.getProperty("Alltabs.xpath"))).getText().contains("Related Products")))
 		{
 		count++;
@@ -323,9 +324,10 @@ public class TC04Opencart extends Extentreports
 	}
 	//Step 21
 	@AfterClass
-	public void Logout1()
+	public void Logout1() throws Exception
 	{
 		driver.findElement(By.linkText(pro.getProperty("Logout.linkText"))).click();
+		Thread.sleep(2000);
  	   
  	 
 		String f= driver.findElement(By.xpath(pro.getProperty("Logout.xpath"))).getText();
